@@ -3,6 +3,7 @@
 #define COLOR_CONVERTER_H
 
 #include "ColorCodes.h"
+#include "ColorPair.h"
 #include <iostream>
 
 namespace TelCoColorCoder
