@@ -17,7 +17,7 @@ namespace TelCoColorCoder
 	const char* MinorColorNames[] = {
 		"Blue", "Orange", "Green", "Brown", "Slate"
 	};
-	class ColorPair {};
+	
 }
 
 #endif // TELCO_COLOR_CODER_H
