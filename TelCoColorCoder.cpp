@@ -5,27 +5,28 @@ namespace TelCoColorCoder
 	// ... rest of the implementations from the namespace ...
 	int numberOfMinorColors =
 		sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-	class ColorPair {
-	private:
-		MajorColor majorColor;
-		MinorColor minorColor;
-	public:
-		ColorPair(MajorColor major, MinorColor minor) :
-			majorColor(major), minorColor(minor)
-		{}
-		MajorColor getMajor() {
-			return majorColor;
-		}
-		MinorColor getMinor() {
-			return minorColor;
-		}
-		std::string ToString() {
-			std::string colorPairStr = MajorColorNames[majorColor];
-			colorPairStr += " ";
-			colorPairStr += MinorColorNames[minorColor];
-			return colorPairStr;
-		}
-	};
+	ColorPair::ColorPair(MajorColor major, MinorColor minor)
+		: majorColor(major), minorColor(minor) // Constructor implementation
+	{
+	}
+
+	MajorColor ColorPair::getMajor()
+	{
+		return majorColor;
+	}
+
+	MinorColor ColorPair::getMinor()
+	{
+		return minorColor;
+	}
+
+	std::string ColorPair::ToString()
+	{
+		std::string colorPairStr = MajorColorNames[majorColor];
+		colorPairStr += " ";
+		colorPairStr += MinorColorNames[minorColor];
+		return colorPairStr;
+	}
 	ColorPair GetColorFromPairNumber(int pairNumber) {
 		int zeroBasedPairNumber = pairNumber - 1;
 		MajorColor majorColor =
